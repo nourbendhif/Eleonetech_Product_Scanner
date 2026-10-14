@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="700" viewBox="0 0 1360 700" role="img" aria-labelledby="title description">
+  <title id="title">Product scanner database schema</title>
+  <desc id="description">Two separate tables, Inst and InstMain, with their columns, data types, constraints, and descriptions. No relationship is shown between them.</desc>
+  <style>
+    .panel { fill: #ffffff; stroke: #b8c8c4; stroke-width: 2; }
+    .header { fill: #e7f1ef; }
+    .title { fill: #173d39; font: 700 25px "Segoe UI", sans-serif; }
+    .subtitle { fill: #536864; font: 15px "Segoe UI", sans-serif; }
+    .field { fill: #203330; font: 700 16px "Segoe UI", sans-serif; }
+    .meta { fill: #087e78; font: 14px "Segoe UI", sans-serif; }
+    .note { fill: #536864; font: 14px "Segoe UI", sans-serif; }
+    .rule { stroke: #dce5e2; stroke-width: 1; }
+  </style>
+
+  <g aria-label="Inst table">
+    <rect class="panel" x="40" y="40" width="620" height="620" rx="8" />
+    <path class="header" d="M48 40h604a8 8 0 0 1 8 8v74H40V48a8 8 0 0 1 8-8z" />
+    <text class="title" x="64" y="79">Inst</text>
+    <text class="subtitle" x="64" y="103">Instrument status</text>
+
+    <text class="field" x="64" y="151">Id</text>
+    <text class="meta" x="168" y="151">CHAR(30) · PRIMARY KEY · NOT NULL</text>
+    <text class="note" x="64" y="174">Unique identifier of the instrument</text>
+    <line class="rule" x1="64" y1="188" x2="636" y2="188" />
+
+    <text class="field" x="64" y="216">Name</text>
+    <text class="meta" x="168" y="216">CHAR(30) · NOT NULL</text>
+    <text class="note" x="64" y="239">Name of the instrument</text>
+    <line class="rule" x1="64" y1="253" x2="636" y2="253" />
+
+    <text class="field" x="64" y="281">IsOut</text>
+    <text class="meta" x="168" y="281">BIT · NOT NULL</text>
+    <text class="note" x="64" y="304">1 = out; 0 = available</text>
+    <line class="rule" x1="64" y1="318" x2="636" y2="318" />
+
+    <text class="field" x="64" y="346">OutStartDate</text>
+    <text class="meta" x="200" y="346">DATE · NULL</text>
+    <text class="note" x="64" y="369">Date when the instrument was taken out</text>
+    <line class="rule" x1="64" y1="383" x2="636" y2="383" />
+
+    <text class="field" x="64" y="411">OutStartTime</text>
+    <text class="meta" x="200" y="411">TIME(7) · NULL</text>
+    <text class="note" x="64" y="434">Time when the instrument was taken out</text>
+    <line class="rule" x1="64" y1="448" x2="636" y2="448" />
+
+    <text class="field" x="64" y="476">UserName</text>
+    <text class="meta" x="168" y="476">CHAR(20) · NULL</text>
+    <text class="note" x="64" y="499">Username of the person who took the instrument</text>
+    <line class="rule" x1="64" y1="513" x2="636" y2="513" />
+
+    <text class="field" x="64" y="541">TimeoutSeconds</text>
+    <text class="meta" x="220" y="541">INT · NOT NULL</text>
+    <text class="note" x="64" y="564">Timeout duration in seconds</text>
+    <line class="rule" x1="64" y1="578" x2="636" y2="578" />
+
+    <text class="field" x="64" y="606">OutDuration</text>
+    <text class="meta" x="200" y="606">TIME(7) · NULL</text>
+    <text class="note" x="64" y="629">Duration of the instrument's absence</text>
+  </g>
+
+  <g aria-label="InstMain table">
+    <rect class="panel" x="700" y="40" width="620" height="295" rx="8" />
+    <path class="header" d="M708 40h604a8 8 0 0 1 8 8v74H700V48a8 8 0 0 1 8-8z" />
+    <text class="title" x="724" y="79">InstMain</text>
+    <text class="subtitle" x="724" y="103">Inventory</text>
+
+    <text class="field" x="724" y="151">Name</text>
+    <text class="meta" x="828" y="151">CHAR(30) · PRIMARY KEY · NOT NULL</text>
+    <text class="note" x="724" y="174">Unique name identifying the product or instrument</text>
+    <line class="rule" x1="724" y1="188" x2="1296" y2="188" />
+
+    <text class="field" x="724" y="216">Quantity</text>
+    <text class="meta" x="828" y="216">INT · NOT NULL</text>
+    <text class="note" x="724" y="239">Available or registered quantity</text>
+    <line class="rule" x1="724" y1="253" x2="1296" y2="253" />
+
+    <text class="field" x="724" y="281">LastProductOut</text>
+    <text class="meta" x="880" y="281">CHAR(30) · NULL</text>
+    <text class="note" x="724" y="304">Name of the last product taken out</text>
+  </g>
+</svg>
