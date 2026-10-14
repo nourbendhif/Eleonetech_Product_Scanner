@@ -1,7 +1,7 @@
 # Eleonetech Product Scanner
 
 ## Overview
-This project combines LabVIEW, Python, and machine learning to create a comprehensive data analysis and processing application.
+Developed as an internship project at Eleonetech, this system scans product serial codes using a real-time camera feed. A YOLO model detects the code regions, and optical character recognition (OCR) reads the text using Tesseract. The Python scanning process is integrated with LabVIEW so the results can be used as part of the machine's industrial workflow.
 
 ## Project Structure
 
