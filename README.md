@@ -66,7 +66,7 @@ No foreign key relationship is shown between `Inst` and `InstMain` in the provid
 [Add contribution guidelines as needed]
 
 ## License
-[Add license information as needed]
+The original source code in this repository is licensed under the [MIT License](LICENSE). Replace `[Copyright Holder]` in the license file with the copyright owner's name before publishing. The bundled model, LabVIEW files, and third-party components may be subject to separate ownership or licensing terms; confirm and document those separately.
 
 ## Contact
 [Add contact information as needed]
